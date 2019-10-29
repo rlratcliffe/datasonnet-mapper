@@ -88,6 +88,5 @@ public class CryptoTest {
         mapper = new Mapper("DS.Crypto.decrypt(\"AES\", \"O3A6luQUlXuIQ6WUd2OEWQ==\", \"DataSonnet123456\")", new ArrayList<>(), true);
         encrypted = mapper.transform("{}").replaceAll("\"", "");
         assertTrue("HelloWorld".equals(encrypted));
-
     }
 }
