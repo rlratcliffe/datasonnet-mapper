@@ -73,12 +73,21 @@ public class CryptoTest {
 
     @Test
     void testEncrypt() {
-        Mapper mapper = new Mapper("DS.Crypto.encrypt(\"HelloWorld\", \"DataSonnet123\")", new ArrayList<>(), true);
+        Mapper mapper = new Mapper("DS.Crypto.encrypt(\"Blowfish\", \"HelloWorld\", \"DataSonnet123\")", new ArrayList<>(), true);
         String encrypted = mapper.transform("{}").replaceAll("\"", "");
         assertTrue("HdK8opktKiK3ero0RJiYbA==".equals(encrypted));
 
-        mapper = new Mapper("DS.Crypto.decrypt(\"HdK8opktKiK3ero0RJiYbA==\", \"DataSonnet123\")", new ArrayList<>(), true);
+        mapper = new Mapper("DS.Crypto.decrypt(\"Blowfish\", \"HdK8opktKiK3ero0RJiYbA==\", \"DataSonnet123\")", new ArrayList<>(), true);
         String decrypted = mapper.transform("{}").replaceAll("\"", "");
         assertTrue("HelloWorld".equals(decrypted));
+
+        mapper = new Mapper("DS.Crypto.encrypt(\"AES\", \"HelloWorld\", \"DataSonnet123456\")", new ArrayList<>(), true);
+        encrypted = mapper.transform("{}").replaceAll("\"", "");
+        assertTrue("O3A6luQUlXuIQ6WUd2OEWQ==".equals(encrypted));
+
+        mapper = new Mapper("DS.Crypto.decrypt(\"AES\", \"O3A6luQUlXuIQ6WUd2OEWQ==\", \"DataSonnet123456\")", new ArrayList<>(), true);
+        encrypted = mapper.transform("{}").replaceAll("\"", "");
+        assertTrue("HelloWorld".equals(encrypted));
+
     }
 }

@@ -1,9 +1,11 @@
 package com.datasonnet.portx;
 
+import org.bouncycastle.crypto.BlockCipher;
 import org.bouncycastle.crypto.CryptoException;
 import org.bouncycastle.crypto.engines.BlowfishEngine;
 import org.bouncycastle.crypto.paddings.PaddedBufferedBlockCipher;
 import org.bouncycastle.crypto.params.KeyParameter;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.util.encoders.Hex;
 
 import javax.crypto.Mac;
@@ -11,14 +13,57 @@ import javax.crypto.spec.SecretKeySpec;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.security.Security;
+import java.util.Arrays;
 import java.util.Base64;
 
 
 public class Crypto {
 
-    public static String encrypt(String value, String keyString)
+    public static String[] ENGINES = new String[] {
+            "AES",
+            "AESWrap",
+            "Blowfish",
+            "Camellia",
+            "CamelliaWrap",
+            "CAST5",
+            "CAST6",
+            "DES",
+            "DESede",
+            "DESedeWrap",
+            "DSTU7624",
+            "DSTU7624Wrap",
+            "GOST28147",
+            "GOST3412_2015",
+            "IDEA",
+            "Noekeon",
+            "RC2",
+            "RC532",
+            "RC564",
+            "RC6",
+            "Rijndael",
+            "SEED",
+            "SEEDWrap",
+            "Shacal2",
+            "Serpent",
+            "Skipjack",
+            "SM4",
+            "TEA",
+            "Threefish",
+            "Twofish",
+            "XTEA"
+    };
+    public static String ENGINE_PREFIX = "Engine";
+
+
+    public static String encrypt(String algorithm, String value, String keyString)
             throws Exception {
-        BlowfishEngine engine = new BlowfishEngine();
+        if (!Arrays.asList(ENGINES).contains(algorithm)) {
+            throw new IllegalArgumentException("Unknown algorithm '" + algorithm + "'");
+        }
+
+        Security.addProvider(new BouncyCastleProvider());
+        BlockCipher engine = (BlockCipher)Class.forName("org.bouncycastle.crypto.engines." + algorithm + ENGINE_PREFIX).newInstance();
         PaddedBufferedBlockCipher cipher =
                 new PaddedBufferedBlockCipher(engine);
         KeyParameter key = new KeyParameter(keyString.getBytes());
@@ -36,9 +81,14 @@ public class Crypto {
         return s;
     }
 
-    public static String decrypt(String value, String keyString)
+    public static String decrypt(String algorithm, String value, String keyString)
             throws Exception {
-        BlowfishEngine engine = new BlowfishEngine();
+        if (!Arrays.asList(ENGINES).contains(algorithm)) {
+            throw new IllegalArgumentException("Unknown algorithm '" + algorithm + "'");
+        }
+
+        Security.addProvider(new BouncyCastleProvider());
+        BlockCipher engine = (BlockCipher)Class.forName("org.bouncycastle.crypto.engines." + algorithm + ENGINE_PREFIX).newInstance();
         PaddedBufferedBlockCipher cipher =
                 new PaddedBufferedBlockCipher(engine);
         StringBuffer result = new StringBuffer();

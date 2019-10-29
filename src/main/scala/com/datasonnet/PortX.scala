@@ -119,13 +119,13 @@ object PortX {
         (ev, fs, value: String, secret: String, algorithm: String) =>
           com.datasonnet.portx.Crypto.hmac(value, secret, algorithm)
       },
-      builtin("encrypt", "value", "password") {
-        (ev, fs, value: String, password: String) =>
-          com.datasonnet.portx.Crypto.encrypt(value, password)
+      builtin("encrypt", "algorithm", "value", "password") {
+        (ev, fs, algorithm: String, value: String, password: String) =>
+          com.datasonnet.portx.Crypto.encrypt(algorithm, value, password)
       },
-      builtin("decrypt", "value", "password") {
-        (ev, fs, value: String, password: String) =>
-          com.datasonnet.portx.Crypto.decrypt(value, password)
+      builtin("decrypt", "algorithm","value", "password") {
+        (ev, fs, algorithm: String, value: String, password: String) =>
+          com.datasonnet.portx.Crypto.decrypt(algorithm, value, password)
       },
     ),
 
