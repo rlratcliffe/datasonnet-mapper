@@ -12,13 +12,13 @@ The response is a string containing the hash bytes.
 
 ------------------------
 {
-    hashValue: DS.Crypto.hash("HelloWorld", "MD5")
+    hashValue: DS.Crypto.hash(`HelloWorld`, `MD5`)
 }
 ------------------------
 .Result
 ------------------------
 {
-    "hashValue": "68e109f0f40ca72a15e05cc22786f8e6"
+    `hashValue`: `68e109f0f40ca72a15e05cc22786f8e6`
 }
 ------------------------
 ### `hmac(string value, string secret, string algorithm)`
@@ -28,41 +28,44 @@ Generates hash-based message autentication code using provided secret and a hash
 
 ------------------------
 {
-    hmacValue: DS.Crypto.hmac("HelloWorld", "DataSonnet rules!", "HmacSHA256")
+    hmacValue: DS.Crypto.hmac(`HelloWorld`, `DataSonnet rules!`, `HmacSHA256`)
 }
 ------------------------
 .Result
 ------------------------
 {
-    "hmacValue": "7854220ef827b07529509f68f391a80bf87fff328dbda140ed582520a1372dc1"
+    `hmacValue`: `7854220ef827b07529509f68f391a80bf87fff328dbda140ed582520a1372dc1`
 }
 ------------------------
 
-### `encrypt(string value, string key)`
-Encrypts the string using the key and the Blowfish algorithm. The result is Base64-encoded encrypted string.
+### `encrypt(string algorithm, string value, string key)`
+Encrypts the string using the key and the specified algorithm. The result is Base64-encoded encrypted string.
+
+The `algorithm` parameter value must be one of the following:
+`AES`,`AESWrap`,`Blowfish`,`Camellia`,`CamelliaWrap`,`CAST5`,`CAST6`,`DES`,`DESede`,`DESedeWrap`,`DSTU7624`,`DSTU7624Wrap`,`GOST28147`,`GOST3412_2015`,`IDEA`,`Noekeon`,`RC2`,`RC532`,`RC564`,`RC6`,`Rijndael`,`SEED`,`SEEDWrap`,`Shacal2`,`Serpent`,`Skipjack`,`SM4`,`TEA`,`Threefish`,`Twofish`,`XTEA`
 
 *Example:*
 
 ------------------------
 {
-    passwd: DS.Crypto.encrypt("HelloWorld", "DataSonnet123")
+    passwd: DS.Crypto.encrypt(`Blowfish`, `HelloWorld`, `DataSonnet123`)
 }
 ------------------------
 .Result
 ------------------------
 {
-    "passwd": "HdK8opktKiK3ero0RJiYbA=="
+    `passwd`: `HdK8opktKiK3ero0RJiYbA==`
 }
 ------------------------
 
-### `decrypt(string value, string key)`
-Decrypts the string using the key and the Blowfish algorithm.
+### `decrypt(string algorithm, string value, string key)`
+Decrypts the string using the key and the specified algorithm.
 
 *Example:*
 
 ------------------------
 {
-    passwd: DS.Crypto.decrypt(payload.encryptedPassword, "MySecretKey")
+    passwd: DS.Crypto.decrypt("Blowfish", payload.encryptedPassword, `MySecretKey`)
 }
 ------------------------
 
@@ -82,7 +85,7 @@ Returns the current date/time from the system UTC clock in ISO-8601 format.
 .Result:
 ------------------------
 {
-    "currentZuluTime": "2019-08-19T18:58:38.313Z"
+    `currentZuluTime`: `2019-08-19T18:58:38.313Z`
 }
 ------------------------
 
@@ -93,7 +96,7 @@ The `period` is a string in the ISO-8601 period format.
 *Example*
 
 ------------------------
-DS.ZonedDateTime.offset("2019-07-22T21:00:00Z", "P1Y1D")
+DS.ZonedDateTime.offset(`2019-07-22T21:00:00Z`, `P1Y1D`)
 ------------------------
 .Result:
 ------------------------
@@ -106,7 +109,7 @@ Reformats a zoned date-time string.
 *Example*
 
 ------------------------
-DS.ZonedDateTime.format("2019-07-04T21:00:00Z", "yyyy-MM-dd'T'HH:mm:ssVV", "d MMM uuuu")
+DS.ZonedDateTime.format(`2019-07-04T21:00:00Z`, `yyyy-MM-dd'T'HH:mm:ssVV`, `d MMM uuuu`)
 ------------------------
 .Result:
 ------------------------
@@ -123,7 +126,7 @@ The response is formatted using the same format as an input.
 *Example*
 
 ------------------------
-DS.ZonedDateTime.changeTimeZone("2019-07-04T21:00:00-0500", "yyyy-MM-dd'T'HH:mm:ssZ", "America/Los_Angeles")
+DS.ZonedDateTime.changeTimeZone(`2019-07-04T21:00:00-0500`, `yyyy-MM-dd'T'HH:mm:ssZ`, `America/Los_Angeles`)
 ------------------------
 .Result:
 ------------------------
@@ -136,7 +139,7 @@ Returns only local date part of the `datetime` parameter in the ISO-8601 format 
 *Example*
 
 ------------------------
-DS.ZonedDateTime.toLocalDate("2019-07-04T21:00:00-0500", "yyyy-MM-dd'T'HH:mm:ssZ")
+DS.ZonedDateTime.toLocalDate(`2019-07-04T21:00:00-0500`, `yyyy-MM-dd'T'HH:mm:ssZ`)
 ------------------------
 .Result:
 ------------------------
@@ -149,7 +152,7 @@ Returns only local time part of the `datetime` parameter in the ISO-8601 format 
 *Example*
 
 ------------------------
-DS.ZonedDateTime.toLocalTime("2019-07-04T21:00:00-0500", "yyyy-MM-dd'T'HH:mm:ssZ")
+DS.ZonedDateTime.toLocalTime(`2019-07-04T21:00:00-0500`, `yyyy-MM-dd'T'HH:mm:ssZ`)
 ------------------------
 .Result:
 ------------------------
@@ -162,7 +165,7 @@ Returns local datetime part of the `datetime` parameter in the ISO-8601 format w
 *Example*
 
 ------------------------
-DS.ZonedDateTime.toLocalDateTime("2019-07-04T21:00:00-0500", "yyyy-MM-dd'T'HH:mm:ssZ")
+DS.ZonedDateTime.toLocalDateTime(`2019-07-04T21:00:00-0500`, `yyyy-MM-dd'T'HH:mm:ssZ`)
 ------------------------
 .Result:
 ------------------------
@@ -185,7 +188,7 @@ Returns the current date/time from the system UTC clock in ISO-8601 format witho
 .Result:
 ------------------------
 {
-    "currentLocalTime": "2019-08-19T18:58:38.313"
+    `currentLocalTime`: `2019-08-19T18:58:38.313`
 }
 ------------------------
 
@@ -196,7 +199,7 @@ The `period` is a string in the ISO-8601 period format.
 *Example*
 
 ------------------------
-DS.LocalDateTime.offset("2019-07-22T21:00:00", "P1Y1D")
+DS.LocalDateTime.offset(`2019-07-22T21:00:00`, `P1Y1D`)
 ------------------------
 .Result:
 ------------------------
@@ -209,7 +212,7 @@ Reformats a local date-time string.
 *Example*
 
 ------------------------
-DS.LocalDateTime.format("2019-07-04T21:00:00", "yyyy-MM-dd'T'HH:mm:ss", "d MMM uuuu")
+DS.LocalDateTime.format(`2019-07-04T21:00:00`, `yyyy-MM-dd'T'HH:mm:ss`, `d MMM uuuu`)
 ------------------------
 .Result:
 ------------------------
@@ -223,7 +226,7 @@ The `format1` and `format2` parameters must not have an offset or time zone.
 *Example*
 
 ------------------------
-DS.LocalDateTime.compare("2019-07-04T21:00:00", "yyyy-MM-dd'T'HH:mm:ss", "2019-07-04T21:00:00", "yyyy-MM-dd'T'HH:mm:ss")
+DS.LocalDateTime.compare(`2019-07-04T21:00:00`, `yyyy-MM-dd'T'HH:mm:ss`, `2019-07-04T21:00:00`, `yyyy-MM-dd'T'HH:mm:ss`)
 ------------------------
 .Result:
 ------------------------
@@ -242,33 +245,33 @@ It uses the https://github.com/json-path/JsonPath[Jayway JsonPath implementation
 .Payload
 ------------------------
 {
-  "store": {
-    "book": [
+  `store`: {
+    `book`: [
       {
-        "category": "reference",
-        "author": "Nigel Rees",
-        "title": "Sayings of the Century",
-        "price": 8.95
+        `category`: `reference`,
+        `author`: `Nigel Rees`,
+        `title`: `Sayings of the Century`,
+        `price`: 8.95
       },
       {
-        "category": "fiction",
-        "author": "Evelyn Waugh",
-        "title": "Sword of Honour",
-        "price": 12.99
+        `category`: `fiction`,
+        `author`: `Evelyn Waugh`,
+        `title`: `Sword of Honour`,
+        `price`: 12.99
       },
       {
-        "category": "fiction",
-        "author": "Herman Melville",
-        "title": "Moby Dick",
-        "isbn": "0-553-21311-3",
-        "price": 8.99
+        `category`: `fiction`,
+        `author`: `Herman Melville`,
+        `title`: `Moby Dick`,
+        `isbn`: `0-553-21311-3`,
+        `price`: 8.99
       },
       {
-        "category": "fiction",
-        "author": "J. R. R. Tolkien",
-        "title": "The Lord of the Rings",
-        "isbn": "0-395-19395-8",
-        "price": 22.99
+        `category`: `fiction`,
+        `author`: `J. R. R. Tolkien`,
+        `title`: `The Lord of the Rings`,
+        `isbn`: `0-395-19395-8`,
+        `price`: 22.99
       }
     ]
   }
@@ -277,13 +280,13 @@ It uses the https://github.com/json-path/JsonPath[Jayway JsonPath implementation
 .DataSonnet map:
 ------------------------
 {
-    author: DS.JsonPath.select(payload, "$..book[-2:]..author")[0]
+    author: DS.JsonPath.select(payload, `$..book[-2:]..author`)[0]
 }
 ------------------------
 .Result
 ------------------------
 {
-    "author": "Herman Melville"
+    `author`: `Herman Melville`
 }
 ------------------------
 
@@ -298,10 +301,10 @@ Returns a value inside the object by given path separated by dot ('.').
 .Payload
 ----------
 {
-  "name": "Foo",
-  "language": {
-      "name": "Java",
-      "version": "1.8"
+  `name`: `Foo`,
+  `language`: {
+      `name`: `Java`,
+      `version`: `1.8`
   }
 }
 ----------
@@ -314,7 +317,7 @@ Returns a value inside the object by given path separated by dot ('.').
 .Result
 ------------------------
 {
-   "language": "Java"
+   `language`: `Java`
 }
 ------------------------
 
@@ -327,22 +330,22 @@ Filters array of objects by given condition.
 .Payload
 ----------
 {
-   "languages": [
+   `languages`: [
      {
-       "name": "Foo",
-       "language": "Java"
+       `name`: `Foo`,
+       `language`: `Java`
      },
      {
-       "name": "Bar",
-       "language": "Scala"
+       `name`: `Bar`,
+       `language`: `Scala`
      },
      {
-       "name": "FooBar",
-       "language": "Java"
+       `name`: `FooBar`,
+       `language`: `Java`
      },
      {
-       "name": "FooBar",
-       "language": "C++"
+       `name`: `FooBar`,
+       `language`: `C++`
      }
    ]
  }
@@ -357,12 +360,12 @@ Filters array of objects by given condition.
 ------------------------
 [
  {
-   "name": "Bar",
-   "language": "Scala"
+   `name`: `Bar`,
+   `language`: `Scala`
  },
  {
-   "name": "FooBar",
-   "language": "C++"
+   `name`: `FooBar`,
+   `language`: `C++`
  }
 ]
 ------------------------
@@ -376,26 +379,26 @@ The discriminator can be a path inside the objects to group, e.g. 'language.name
 .Payload
 ----------
 {
-  "languages": [
+  `languages`: [
     {
-      "name": "Foo",
-      "language": {
-          "name": "Java",
-          "version": "1.8"
+      `name`: `Foo`,
+      `language`: {
+          `name`: `Java`,
+          `version`: `1.8`
       }
     },
     {
-      "name": "Bar",
-      "language": {
-          "name": "Scala",
-          "version": "1.0"
+      `name`: `Bar`,
+      `language`: {
+          `name`: `Scala`,
+          `version`: `1.0`
       }
     },
     {
-      "name": "FooBar",
-      "language": {
-          "name": "Java",
-          "version": "1.7"
+      `name`: `FooBar`,
+      `language`: {
+          `name`: `Java`,
+          `version`: `1.7`
       }
     }
   ]
@@ -410,30 +413,30 @@ The discriminator can be a path inside the objects to group, e.g. 'language.name
 .Result
 ------------------------
 {
-    "languageGroups": {
-       "Java": [
+    `languageGroups`: {
+       `Java`: [
           {
-             "language": {
-                "name": "Java",
-                "version": "1.8"
+             `language`: {
+                `name`: `Java`,
+                `version`: `1.8`
              },
-             "name": "Foo"
+             `name`: `Foo`
           },
           {
-             "language": {
-                "name": "Java",
-                "version": "1.7"
+             `language`: {
+                `name`: `Java`,
+                `version`: `1.7`
              },
-             "name": "FooBar"
+             `name`: `FooBar`
           }
        ],
-       "Scala": [
+       `Scala`: [
           {
-             "language": {
-                "name": "Scala",
-                "version": "1.0"
+             `language`: {
+                `name`: `Scala`,
+                `version`: `1.0`
              },
-             "name": "Bar"
+             `name`: `Bar`
           }
        ]
     }
@@ -448,13 +451,13 @@ Removes a property with given name from the object and returns the remaining obj
 .Payload
 ----------
 {
-   "availableSeats": 45,
-   "airlineName": "Delta",
-   "aircraftBrand": "Boeing",
-   "aircraftType": "717",
-   "departureDate": "01/20/2019",
-   "origin": "PHX",
-   "destination": "SEA"
+   `availableSeats`: 45,
+   `airlineName`: `Delta`,
+   `aircraftBrand`: `Boeing`,
+   `aircraftType`: `717`,
+   `departureDate`: `01/20/2019`,
+   `origin`: `PHX`,
+   `destination`: `SEA`
  }
 ----------
 .DataSonnet map:
@@ -464,12 +467,12 @@ DS.Util.remove(payload, 'availableSeats')
 .Result
 ------------------------
 {
-   "airlineName": "Delta",
-   "aircraftBrand": "Boeing",
-   "aircraftType": "717",
-   "departureDate": "01/20/2019",
-   "origin": "PHX",
-   "destination": "SEA"
+   `airlineName`: `Delta`,
+   `aircraftBrand`: `Boeing`,
+   `aircraftType`: `717`,
+   `departureDate`: `01/20/2019`,
+   `origin`: `PHX`,
+   `destination`: `SEA`
  }
 ------------------------
 
@@ -481,13 +484,13 @@ Removes all properties with names from a provided list of strings from the objec
 .Payload
 ----------
 {
-   "availableSeats": 45,
-   "airlineName": "Delta",
-   "aircraftBrand": "Boeing",
-   "aircraftType": "717",
-   "departureDate": "01/20/2019",
-   "origin": "PHX",
-   "destination": "SEA"
+   `availableSeats`: 45,
+   `airlineName`: `Delta`,
+   `aircraftBrand`: `Boeing`,
+   `aircraftType`: `717`,
+   `departureDate`: `01/20/2019`,
+   `origin`: `PHX`,
+   `destination`: `SEA`
  }
 ----------
 .DataSonnet map:
@@ -497,10 +500,10 @@ DS.Util.removeAll(payload, ['availableSeats', 'aircraftType', 'aircraftBrand'])
 .Result
 ------------------------
 {
-   "airlineName": "Delta",
-   "departureDate": "01/20/2019",
-   "origin": "PHX",
-   "destination": "SEA"
+   `airlineName`: `Delta`,
+   `departureDate`: `01/20/2019`,
+   `origin`: `PHX`,
+   `destination`: `SEA`
  }
 ------------------------
 
@@ -525,7 +528,7 @@ Flattens multiple nested arrays into a single array.
         7
       ],
       {
-        "x": "y"
+        `x`: `y`
       }
     ]
 ]
@@ -544,7 +547,7 @@ DS.Util.flattenArrays(payload)
      6,
      7,
      {
-        "x": "y"
+        `x`: `y`
      }
 ]
 ------------------------
@@ -557,10 +560,10 @@ Returns an array with elements in reverse order.
 .Payload
 ----------
 [
-    "a",
-    "b",
-    "c",
-    "d"
+    `a`,
+    `b`,
+    `c`,
+    `d`
 ]
 ----------
 .DataSonnet map:
@@ -570,10 +573,10 @@ DS.Util.reverse(payload)
 .Result
 ------------------------
 [
-    "d",
-    "c",
-    "b",
-    "a",
+    `d`,
+    `c`,
+    `b`,
+    `a`,
 ]
 ------------------------
 
@@ -586,7 +589,7 @@ Parses a string which contains a double number and returns its numeric represent
 .Payload
 ----------
 {
-    "numberAsString": "123.45679"
+    `numberAsString`: `123.45679`
 }
 
 ----------
@@ -599,7 +602,7 @@ Parses a string which contains a double number and returns its numeric represent
 .Result
 ------------------------
 {
-    "num": 123.45679
+    `num`: 123.45679
 }
 ------------------------
 
@@ -614,21 +617,21 @@ WARNING: The parameter `keyF` is ignored. This is a known issue and will be reso
 ----------
 [
     {
-      "language": {
-        "name": "Java8",
-        "version": "1.8"
+      `language`: {
+        `name`: `Java8`,
+        `version`: `1.8`
       }
     },
     {
-      "language": {
-        "name": "Java8",
-        "version": "1.8.0"
+      `language`: {
+        `name`: `Java8`,
+        `version`: `1.8.0`
       }
     },
     {
-      "language": {
-        "name": "Scala",
-        "version": "2.13.0"
+      `language`: {
+        `name`: `Scala`,
+        `version`: `2.13.0`
       }
     }
 ]
@@ -641,9 +644,9 @@ DS.Util.duplicates(payload, function(x) x.language.name)
 ------------------------
 [
   {
-    "language": {
-      "name": "Java8",
-      "version":"1.8.0"
+    `language`: {
+      `name`: `Java8`,
+      `version`:`1.8.0`
     }
   }
 ]
@@ -675,7 +678,7 @@ Rounds a double to the number of digits after the decimal point
 .Payload
 ----------
 {
-    "num": 123.562567558
+    `num`: 123.562567558
 }
 ----------
 .DataSonnet map:
@@ -696,24 +699,24 @@ Returns an object where keys are the results of calling keyF on the values, and 
 ----------
 [
     {
-      "name": "Foo",
-      "language": {
-        "name": "Java",
-        "version": "1.8"
+      `name`: `Foo`,
+      `language`: {
+        `name`: `Java`,
+        `version`: `1.8`
       }
     },
     {
-      "name": "Bar",
-      "language": {
-        "name": "Scala",
-        "version": "1.0"
+      `name`: `Bar`,
+      `language`: {
+        `name`: `Scala`,
+        `version`: `1.0`
       }
     },
     {
-      "name": "FooBar",
-      "language": {
-        "name": "Java",
-        "version": "1.7"
+      `name`: `FooBar`,
+      `language`: {
+        `name`: `Java`,
+        `version`: `1.7`
       }
     }
   ]
@@ -725,8 +728,8 @@ DS.Util.counts(payload, function(x) x.language.name);
 .Result
 ------------------------
 {
-    "Java": 2,
-    "Scala": 1
+    `Java`: 2,
+    `Scala`: 1
 }
 ------------------------
 
@@ -739,24 +742,24 @@ Maps an array into an object, where the keys are the result of calling keyF on e
 ----------
 [
     {
-      "name": "Foo",
-      "language": {
-        "name": "Java",
-        "version": "1.8"
+      `name`: `Foo`,
+      `language`: {
+        `name`: `Java`,
+        `version`: `1.8`
       }
     },
     {
-      "name": "Bar",
-      "language": {
-        "name": "Scala",
-        "version": "1.0"
+      `name`: `Bar`,
+      `language`: {
+        `name`: `Scala`,
+        `version`: `1.0`
       }
     },
     {
-      "name": "FooBar",
-      "language": {
-        "name": "C++",
-        "version": "n/a"
+      `name`: `FooBar`,
+      `language`: {
+        `name`: `C++`,
+        `version`: `n/a`
       }
     }
   ]
@@ -769,17 +772,17 @@ DS.Util.mapToObject(payload, function(x) x.language.name, function(v) v.language
 .Result
 ------------------------
 {
- "Java": {
-   "name": "Java",
-   "version": "1.8"
+ `Java`: {
+   `name`: `Java`,
+   `version`: `1.8`
  },
- "C++": {
-   "name": "C++",
-   "version": "n/a"
+ `C++`: {
+   `name`: `C++`,
+   `version`: `n/a`
  },
- "Scala": {
-   "name": "Scala",
-   "version": "1.0"
+ `Scala`: {
+   `name`: `Scala`,
+   `version`: `1.0`
  }
 };
 ------------------------
