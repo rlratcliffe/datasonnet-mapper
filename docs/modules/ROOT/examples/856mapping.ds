@@ -1,0 +1,112 @@
+local nowTime = DS.LocalDateTime.now();
+
+local getLoop_2_N1_2200(delivery) =
+[
+    {
+        "N1_2200": {
+           N101: if (partner.type == "Manufacturer") then "SF" else
+                 if (partner.type == "Ship To") then "ST" else
+                 "",
+           N103: if (partner.type == "Ship To") then "PL" else "92",
+           N102: partner.name1,
+           N104: partner.externalReference
+        },
+       "N3_2400": [
+         {
+           N301: partner.address1,
+           N302: partner.address2
+         }
+       ],
+       "N4_2500": {
+         N401: partner.city,
+         N402: partner.state,
+         N403: partner.postalCode
+       }
+    }
+
+    for partner in DS.JsonPath.select(delivery, "$..partners[?(@.type == 'Manufacturer' || @.type == 'Ship To')]")
+];
+
+//TODO delivery.details filter (($.purchaseOrderLineNumber matches /^[^9].*/) and not $.salesOrderLineItemCategory == "ZTHC")
+//local filterDeliveryDetails(details) = std.filter(function(detail) detail.salesOrderLineItemCategory != "ZTHC", details);
+local filterDeliveryDetails(details) = details;
+
+//TODO regex support
+//fun getRight5digits(inp) =
+//  {
+//    value:
+//      if (not (inp scan /[0-9]{0,5}$/) == null)
+//        (flatten((inp scan /[0-9]{0,5}$/)))[0]
+//      else
+//        ""
+//  }
+local getRight5digits(str) = str;
+
+[
+  {
+    ST: {
+      ST01: "856",
+      ST02: "462390001"
+  },
+  "_856": {
+    BSN01: "00",
+    BSN02: delivery.header.deliveryNumber,
+    BSN03: DS.LocalDateTime.format(nowTime, "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyyMMdd"),
+    BSN04: DS.LocalDateTime.format(nowTime, "yyyy-MM-dd'T'HH:mm:ss.SSS", "hhmm")
+  },
+  "DTM_0400": [
+        {
+          DTM01: "017",
+          DTM02: delivery.header.deliveryDate
+        }
+  ],
+  SE: {
+    SE01: "12",
+    SE02: "462390001"
+  },
+  "Loop_1_HL_0100": [
+    {
+      "HL_0100": {
+        HL01: "1",
+        HL03: "S"
+      },
+      "Loop_2_N1_2200": getLoop_2_N1_2200(delivery)
+    }
+  ] + std.mapWithIndex(function(indexOfDetail, detail)
+                       {
+                         "HL_0100": {
+                           HL01: std.toString(indexOfDetail + 2),
+                           HL02: "1",
+                           HL03: "I"
+                         },
+                         "LIN_0200": {
+                           LIN01: getRight5digits(detail.purchaseOrderLineNumber),
+                           LIN02: "BP",
+                           LIN03: detail.externalPartNumber,
+                           LIN04: "VN",
+                           LIN05: detail.internalPartNumber
+                         },
+                         "PRF_0500": {
+                            PRF01: detail.purchaseOrder,
+                            PRF04: detail.purchaseOrderDate
+                         },
+                         "PID_0700": [
+                            {
+                              PID01: "F",
+                              PID05: detail.itemDescription
+                            }
+                         ],
+                         "SN1_0300": {
+                           SN102: if (detail.quantity != null) then std.toString(detail.quantity)
+                                  else "",
+                           SN103: detail.unitOfMeasure
+                         },
+                       }, filterDeliveryDetails(delivery.details)),
+
+  "CTT_0100": {
+     CTT01: std.toString(std.length(filterDeliveryDetails(delivery.details)))
+  }
+}
+for delivery in payload.shipment.delivery
+]
+

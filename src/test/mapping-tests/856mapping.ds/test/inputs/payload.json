@@ -1,0 +1,1166 @@
+{
+  "controlRecord": {
+    "sender": "XX4CLNT000",
+    "receiver": "0001009995",
+    "sourceMessageType": "DELVRY07",
+    "sourceMessageId": "0000000001942411",
+    "transactionId": "b8884860-0e0f-43f9-bb06-ab4d69ca75a4"
+  },
+  "shipment": {
+    "shipmentNumber": "",
+    "delivery": [
+      {
+        "header": {
+          "deliveryNumber": "8101505600",
+          "billOfLading": null,
+          "deliveryDate": "20190628",
+          "deliveryTime": "000000",
+          "sealNumber": "3279",
+          "trailerNumber": "54990",
+          "proNumber": null,
+          "externalDeliveryNumber": null,
+          "scacCode": "DETR",
+          "partners": [
+            {
+              "type": "AG",
+              "internalReference": "0001005905",
+              "externalReference": null,
+              "name1": "ABC CORP",
+              "name2": "",
+              "name3": "",
+              "name4": "",
+              "address1": "5549 ALDER ST",
+              "address2": "",
+              "address3": "",
+              "city": "Mercer Island",
+              "state": "WA",
+              "postalCode": "98040",
+              "country": "US",
+              "phone": "206-355-2298",
+              "fax": "206-355-6545",
+              "email": "ADAM.BOB@ABC.COM"
+            },
+            {
+              "type": "Manufacturer",
+              "internalReference": "9701",
+              "externalReference": "990000",
+              "name1": "Selah Enterprise Dr Whse",
+              "name2": "Selah Enterprise Dr Whse",
+              "name3": "",
+              "name4": "",
+              "address1": "925 ENTERPRISE DR",
+              "address2": "",
+              "address3": "",
+              "city": "SELAH",
+              "state": "WA",
+              "postalCode": "98942",
+              "country": null,
+              "phone": null,
+              "fax": null,
+              "email": null
+            },
+            {
+              "type": "SP",
+              "internalReference": "0001018829",
+              "externalReference": null,
+              "name1": "DB TRANSPORATION CO",
+              "name2": "",
+              "name3": "",
+              "name4": "",
+              "address1": "PO BOX 945",
+              "address2": "",
+              "address3": "",
+              "city": "WASHINGTON RAPIDS",
+              "state": "WA",
+              "postalCode": "94495-0145",
+              "country": null,
+              "phone": null,
+              "fax": null,
+              "email": null
+            },
+            {
+              "type": "Ship To",
+              "internalReference": "0009013622",
+              "externalReference": "1020",
+              "name1": "THREE TOP",
+              "name2": "PLANT 9020",
+              "name3": "",
+              "name4": "",
+              "address1": "9020 HOOVER ST",
+              "address2": "1020",
+              "address3": "",
+              "city": "TREEPORT",
+              "state": "WA",
+              "postalCode": "90601-9791",
+              "country": "US",
+              "phone": null,
+              "fax": null,
+              "email": "Mark@threetop.com"
+            },
+            {
+              "type": "ZZ",
+              "internalReference": "0001005909",
+              "externalReference": null,
+              "name1": "ABC CORP",
+              "name2": "",
+              "name3": "",
+              "name4": "",
+              "address1": "4545 ALDER ST",
+              "address2": "",
+              "address3": "",
+              "city": "SCHOOLFIELD",
+              "state": "WA",
+              "postalCode": "94476",
+              "country": "US",
+              "phone": "206-355-2298",
+              "fax": "206-355-6545",
+              "email": "ADAM.BOB@ABC.COM"
+            },
+            {
+              "type": "OSP",
+              "internalReference": "P709",
+              "externalReference": null,
+              "name1": "WA9 Warehouse Shipping Point",
+              "name2": "",
+              "name3": "",
+              "name4": "",
+              "address1": "925 525 ENTERPRISE DR",
+              "address2": "",
+              "address3": "",
+              "city": "SELAH",
+              "state": "WA",
+              "postalCode": "98942",
+              "country": "US",
+              "phone": null,
+              "fax": null,
+              "email": null
+            },
+            {
+              "type": "OSO",
+              "internalReference": "1000",
+              "externalReference": null,
+              "name1": "Modus Packaging Company LLC",
+              "name2": "",
+              "name3": "",
+              "name4": "",
+              "address1": "9645 Bergstrom Rd",
+              "address2": "",
+              "address3": "",
+              "city": "Selah",
+              "state": "WA",
+              "postalCode": "98942",
+              "country": "US",
+              "phone": "206511000",
+              "fax": "2067511825",
+              "email": null
+            }
+          ],
+          "notes": [
+            {
+              "type": "ZTR1",
+              "notes": [
+                "54990",
+                "LINE 2"
+              ],
+              "noteSummary": "54990 LINE 2"
+            },
+            {
+              "type": "ZSL1",
+              "notes": [
+                "3279"
+              ],
+              "noteSummary": "3279"
+            },
+            {
+              "type": "ZPR1",
+              "notes": [
+
+              ],
+              "noteSummary": ""
+            }
+          ]
+        },
+        "details": [
+          {
+            "deliveryLineNumber": "000010",
+            "internalPartNumber": "000000001000037964",
+            "externalPartNumber": "445951",
+            "shipFromnPlant": "1701",
+            "storageLocation": "3E10",
+            "quantity": 135.000,
+            "unitOfMeasure": "EA",
+            "itemDescription": "CTN,RSC,33X18X13,ECT44C,SW",
+            "purchaseOrder": "4501602918",
+            "purchaseOrderLineNumber": "000010",
+            "purchaseOrderDate": "20190628",
+            "externalBatchNumber": null,
+            "characteristics": [
+
+            ],
+            "notes": [
+              {
+                "type": "ZEXT",
+                "notes": [
+                  "DOCK TIME ISN'T REQUIRED",
+                  "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                ],
+                "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+              }
+            ],
+            "batches": [
+              {
+                "deliveryLineNumber": "900002",
+                "internalPartNumber": "000000001000037964",
+                "externalPartNumber": "445951",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3E10",
+                "quantity": 135.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,33X18X13,ECT44C,SW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000010",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": "PRD1087014",
+                "characteristics": [
+                  {
+                    "key": "ZCHB_EXT_BATCH",
+                    "value": "PRD1087014"
+                  },
+                  {
+                    "key": "ZCHB_SLED",
+                    "value": "00/00/0000"
+                  },
+                  {
+                    "key": "ZCHB_MWEIGHT",
+                    "value": "0.00"
+                  }
+                ],
+                "notes": [
+
+                ],
+                "detailHandlingUnits": [
+                  {
+                    "handlingUnitId": "00000000001000999372",
+                    "handlingUnitExternalId": null,
+                    "unitType": "1",
+                    "quantity": "135.000",
+                    "unitOfMeasure": "EA",
+                    "internalBatchNumber": "0000224779"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "deliveryLineNumber": "000020",
+            "internalPartNumber": "000000001000031038",
+            "externalPartNumber": "445983",
+            "shipFromnPlant": "1701",
+            "storageLocation": "3E21",
+            "quantity": 120.000,
+            "unitOfMeasure": "EA",
+            "itemDescription": "CTN,RSC,39.75X39.75X20,ECT51BC,DW",
+            "purchaseOrder": "4501602918",
+            "purchaseOrderLineNumber": "000020",
+            "purchaseOrderDate": "20190628",
+            "externalBatchNumber": null,
+            "characteristics": [
+
+            ],
+            "notes": [
+              {
+                "type": "ZEXT",
+                "notes": [
+                  "DOCK TIME ISN'T REQUIRED",
+                  "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                ],
+                "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+              }
+            ],
+            "batches": [
+              {
+                "deliveryLineNumber": "900004",
+                "internalPartNumber": "000000001000031038",
+                "externalPartNumber": "445983",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3E21",
+                "quantity": 120.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,39.75X39.75X20,ECT51BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000020",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": "PRD1100851",
+                "characteristics": [
+                  {
+                    "key": "ZCHB_EXT_BATCH",
+                    "value": "PRD1100851"
+                  },
+                  {
+                    "key": "ZCHB_SLED",
+                    "value": "00/00/0000"
+                  },
+                  {
+                    "key": "ZCHB_MWEIGHT",
+                    "value": "0.00"
+                  }
+                ],
+                "notes": [
+
+                ],
+                "detailHandlingUnits": [
+                  {
+                    "handlingUnitId": "00000000001001187707",
+                    "handlingUnitExternalId": null,
+                    "unitType": "1",
+                    "quantity": "60.000",
+                    "unitOfMeasure": "EA",
+                    "internalBatchNumber": "0000256777"
+                  },
+                  {
+                    "handlingUnitId": "00000000001001187709",
+                    "handlingUnitExternalId": null,
+                    "unitType": "1",
+                    "quantity": "60.000",
+                    "unitOfMeasure": "EA",
+                    "internalBatchNumber": "0000256777"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "deliveryLineNumber": "000030",
+            "internalPartNumber": "000000001000031311",
+            "externalPartNumber": "446176",
+            "shipFromnPlant": "1701",
+            "storageLocation": "3S05",
+            "quantity": 130.000,
+            "unitOfMeasure": "EA",
+            "itemDescription": "CTN,RSC,36X24X16,ECT51BC,DW",
+            "purchaseOrder": "4501602918",
+            "purchaseOrderLineNumber": "000030",
+            "purchaseOrderDate": "20190628",
+            "externalBatchNumber": null,
+            "characteristics": [
+
+            ],
+            "notes": [
+              {
+                "type": "ZEXT",
+                "notes": [
+                  "DOCK TIME ISN'T REQUIRED",
+                  "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                ],
+                "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+              }
+            ],
+            "batches": [
+              {
+                "deliveryLineNumber": "900001",
+                "internalPartNumber": "000000001000031311",
+                "externalPartNumber": "446176",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3S05",
+                "quantity": 130.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,36X24X16,ECT51BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000030",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": "PRD1110052",
+                "characteristics": [
+                  {
+                    "key": "ZCHB_EXT_BATCH",
+                    "value": "PRD1110052"
+                  },
+                  {
+                    "key": "ZCHB_SLED",
+                    "value": "00/00/0000"
+                  },
+                  {
+                    "key": "ZCHB_MWEIGHT",
+                    "value": "0.00"
+                  }
+                ],
+                "notes": [
+
+                ],
+                "detailHandlingUnits": [
+                  {
+                    "handlingUnitId": "00000000001001263891",
+                    "handlingUnitExternalId": null,
+                    "unitType": "1",
+                    "quantity": "40.000",
+                    "unitOfMeasure": "EA",
+                    "internalBatchNumber": "0000272583"
+                  },
+                  {
+                    "handlingUnitId": "00000000001001263892",
+                    "handlingUnitExternalId": null,
+                    "unitType": "1",
+                    "quantity": "20.000",
+                    "unitOfMeasure": "EA",
+                    "internalBatchNumber": "0000272583"
+                  },
+                  {
+                    "handlingUnitId": "00000000001001263899",
+                    "handlingUnitExternalId": null,
+                    "unitType": "1",
+                    "quantity": "70.000",
+                    "unitOfMeasure": "EA",
+                    "internalBatchNumber": "0000272583"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "deliveryLineNumber": "000040",
+            "internalPartNumber": "000000001000031033",
+            "externalPartNumber": "446373",
+            "shipFromnPlant": "1701",
+            "storageLocation": "3E11",
+            "quantity": 120.000,
+            "unitOfMeasure": "EA",
+            "itemDescription": "CTN,RSC,43X43X39.50,ECT82BC,DW",
+            "purchaseOrder": "4501602918",
+            "purchaseOrderLineNumber": "000040",
+            "purchaseOrderDate": "20190628",
+            "externalBatchNumber": null,
+            "characteristics": [
+
+            ],
+            "notes": [
+              {
+                "type": "ZEXT",
+                "notes": [
+                  "DOCK TIME ISN'T REQUIRED",
+                  "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                ],
+                "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+              }
+            ],
+            "batches": [
+              {
+                "deliveryLineNumber": "900005",
+                "internalPartNumber": "000000001000031033",
+                "externalPartNumber": "446373",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3E11",
+                "quantity": 120.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,43X43X39.50,ECT82BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000040",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": "PRD1112602",
+                "characteristics": [
+                  {
+                    "key": "ZCHB_EXT_BATCH",
+                    "value": "PRD1112602"
+                  },
+                  {
+                    "key": "ZCHB_SLED",
+                    "value": "00/00/0000"
+                  },
+                  {
+                    "key": "ZCHB_MWEIGHT",
+                    "value": "0.00"
+                  }
+                ],
+                "notes": [
+
+                ],
+                "detailHandlingUnits": [
+                  {
+                    "handlingUnitId": "00000000001001301381",
+                    "handlingUnitExternalId": null,
+                    "unitType": "1",
+                    "quantity": "60.000",
+                    "unitOfMeasure": "EA",
+                    "internalBatchNumber": "0000280827"
+                  },
+                  {
+                    "handlingUnitId": "00000000001001301385",
+                    "handlingUnitExternalId": null,
+                    "unitType": "1",
+                    "quantity": "60.000",
+                    "unitOfMeasure": "EA",
+                    "internalBatchNumber": "0000280827"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "deliveryLineNumber": "000050",
+            "internalPartNumber": "000000001000040831",
+            "externalPartNumber": "446386",
+            "shipFromnPlant": "1701",
+            "storageLocation": "3D30",
+            "quantity": 260.000,
+            "unitOfMeasure": "EA",
+            "itemDescription": "INPK,PAD,38X38,ECT32C,SW",
+            "purchaseOrder": "4501602918",
+            "purchaseOrderLineNumber": "000050",
+            "purchaseOrderDate": "20190628",
+            "externalBatchNumber": null,
+            "characteristics": [
+
+            ],
+            "notes": [
+              {
+                "type": "ZEXT",
+                "notes": [
+                  "DOCK TIME ISN'T REQUIRED",
+                  "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                ],
+                "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+              }
+            ],
+            "batches": [
+              {
+                "deliveryLineNumber": "900003",
+                "internalPartNumber": "000000001000040831",
+                "externalPartNumber": "446386",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3D30",
+                "quantity": 260.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "INPK,PAD,38X38,ECT32C,SW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000050",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": "PRD1075842",
+                "characteristics": [
+                  {
+                    "key": "ZCHB_EXT_BATCH",
+                    "value": "PRD1075842"
+                  },
+                  {
+                    "key": "ZCHB_SLED",
+                    "value": "00/00/0000"
+                  },
+                  {
+                    "key": "ZCHB_MWEIGHT",
+                    "value": "0.00"
+                  }
+                ],
+                "notes": [
+
+                ],
+                "detailHandlingUnits": [
+                  {
+                    "handlingUnitId": "00000000001000871221",
+                    "handlingUnitExternalId": null,
+                    "unitType": "1",
+                    "quantity": "260.000",
+                    "unitOfMeasure": "EA",
+                    "internalBatchNumber": "0000202426"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "handlingUnits": [
+          {
+            "handlingUnitId": "00000000001000871221",
+            "handlingUnitExternalId": null,
+            "unitType": "1",
+            "quantity": "260.000",
+            "unitOfMeasure": "EA",
+            "internalBatchNumber": "0000202426",
+            "batch": {
+              "deliveryLineNumber": "900003",
+              "internalPartNumber": "000000001000040831",
+              "externalPartNumber": "446386",
+              "shipFromnPlant": "1701",
+              "storageLocation": "3D30",
+              "quantity": 260.000,
+              "unitOfMeasure": "EA",
+              "itemDescription": "INPK,PAD,38X38,ECT32C,SW",
+              "purchaseOrder": "4501602918",
+              "purchaseOrderLineNumber": "000050",
+              "purchaseOrderDate": "20190628",
+              "externalBatchNumber": "PRD1075842",
+              "characteristics": [
+                {
+                  "key": "ZCHB_EXT_BATCH",
+                  "value": "PRD1075842"
+                },
+                {
+                  "key": "ZCHB_SLED",
+                  "value": "00/00/0000"
+                },
+                {
+                  "key": "ZCHB_MWEIGHT",
+                  "value": "0.00"
+                }
+              ],
+              "notes": [
+
+              ],
+              "handlingUnitDetail": {
+                "deliveryLineNumber": "000050",
+                "internalPartNumber": "000000001000040831",
+                "externalPartNumber": "446386",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3D30",
+                "quantity": 260.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "INPK,PAD,38X38,ECT32C,SW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000050",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": null,
+                "characteristics": [
+
+                ],
+                "notes": [
+                  {
+                    "type": "ZEXT",
+                    "notes": [
+                      "DOCK TIME ISN'T REQUIRED",
+                      "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                    ],
+                    "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "handlingUnitId": "00000000001000999372",
+            "handlingUnitExternalId": null,
+            "unitType": "1",
+            "quantity": "135.000",
+            "unitOfMeasure": "EA",
+            "internalBatchNumber": "0000224779",
+            "batch": {
+              "deliveryLineNumber": "900002",
+              "internalPartNumber": "000000001000037964",
+              "externalPartNumber": "445951",
+              "shipFromnPlant": "1701",
+              "storageLocation": "3E10",
+              "quantity": 135.000,
+              "unitOfMeasure": "EA",
+              "itemDescription": "CTN,RSC,33X18X13,ECT44C,SW",
+              "purchaseOrder": "4501602918",
+              "purchaseOrderLineNumber": "000010",
+              "purchaseOrderDate": "20190628",
+              "externalBatchNumber": "PRD1087014",
+              "characteristics": [
+                {
+                  "key": "ZCHB_EXT_BATCH",
+                  "value": "PRD1087014"
+                },
+                {
+                  "key": "ZCHB_SLED",
+                  "value": "00/00/0000"
+                },
+                {
+                  "key": "ZCHB_MWEIGHT",
+                  "value": "0.00"
+                }
+              ],
+              "notes": [
+
+              ],
+              "handlingUnitDetail": {
+                "deliveryLineNumber": "000010",
+                "internalPartNumber": "000000001000037964",
+                "externalPartNumber": "445951",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3E10",
+                "quantity": 135.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,33X18X13,ECT44C,SW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000010",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": null,
+                "characteristics": [
+
+                ],
+                "notes": [
+                  {
+                    "type": "ZEXT",
+                    "notes": [
+                      "DOCK TIME ISN'T REQUIRED",
+                      "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                    ],
+                    "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "handlingUnitId": "00000000001001187707",
+            "handlingUnitExternalId": null,
+            "unitType": "1",
+            "quantity": "60.000",
+            "unitOfMeasure": "EA",
+            "internalBatchNumber": "0000256777",
+            "batch": {
+              "deliveryLineNumber": "900004",
+              "internalPartNumber": "000000001000031038",
+              "externalPartNumber": "445983",
+              "shipFromnPlant": "1701",
+              "storageLocation": "3E21",
+              "quantity": 120.000,
+              "unitOfMeasure": "EA",
+              "itemDescription": "CTN,RSC,39.75X39.75X20,ECT51BC,DW",
+              "purchaseOrder": "4501602918",
+              "purchaseOrderLineNumber": "000020",
+              "purchaseOrderDate": "20190628",
+              "externalBatchNumber": "PRD1100851",
+              "characteristics": [
+                {
+                  "key": "ZCHB_EXT_BATCH",
+                  "value": "PRD1100851"
+                },
+                {
+                  "key": "ZCHB_SLED",
+                  "value": "00/00/0000"
+                },
+                {
+                  "key": "ZCHB_MWEIGHT",
+                  "value": "0.00"
+                }
+              ],
+              "notes": [
+
+              ],
+              "handlingUnitDetail": {
+                "deliveryLineNumber": "000020",
+                "internalPartNumber": "000000001000031038",
+                "externalPartNumber": "445983",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3E21",
+                "quantity": 120.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,39.75X39.75X20,ECT51BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000020",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": null,
+                "characteristics": [
+
+                ],
+                "notes": [
+                  {
+                    "type": "ZEXT",
+                    "notes": [
+                      "DOCK TIME ISN'T REQUIRED",
+                      "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                    ],
+                    "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "handlingUnitId": "00000000001001187709",
+            "handlingUnitExternalId": null,
+            "unitType": "1",
+            "quantity": "60.000",
+            "unitOfMeasure": "EA",
+            "internalBatchNumber": "0000256777",
+            "batch": {
+              "deliveryLineNumber": "900004",
+              "internalPartNumber": "000000001000031038",
+              "externalPartNumber": "445983",
+              "shipFromnPlant": "1701",
+              "storageLocation": "3E21",
+              "quantity": 120.000,
+              "unitOfMeasure": "EA",
+              "itemDescription": "CTN,RSC,39.75X39.75X20,ECT51BC,DW",
+              "purchaseOrder": "4501602918",
+              "purchaseOrderLineNumber": "000020",
+              "purchaseOrderDate": "20190628",
+              "externalBatchNumber": "PRD1100851",
+              "characteristics": [
+                {
+                  "key": "ZCHB_EXT_BATCH",
+                  "value": "PRD1100851"
+                },
+                {
+                  "key": "ZCHB_SLED",
+                  "value": "00/00/0000"
+                },
+                {
+                  "key": "ZCHB_MWEIGHT",
+                  "value": "0.00"
+                }
+              ],
+              "notes": [
+
+              ],
+              "handlingUnitDetail": {
+                "deliveryLineNumber": "000020",
+                "internalPartNumber": "000000001000031038",
+                "externalPartNumber": "445983",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3E21",
+                "quantity": 120.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,39.75X39.75X20,ECT51BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000020",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": null,
+                "characteristics": [
+
+                ],
+                "notes": [
+                  {
+                    "type": "ZEXT",
+                    "notes": [
+                      "DOCK TIME ISN'T REQUIRED",
+                      "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                    ],
+                    "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "handlingUnitId": "00000000001001263891",
+            "handlingUnitExternalId": null,
+            "unitType": "1",
+            "quantity": "40.000",
+            "unitOfMeasure": "EA",
+            "internalBatchNumber": "0000272583",
+            "batch": {
+              "deliveryLineNumber": "900001",
+              "internalPartNumber": "000000001000031311",
+              "externalPartNumber": "446176",
+              "shipFromnPlant": "1701",
+              "storageLocation": "3S05",
+              "quantity": 130.000,
+              "unitOfMeasure": "EA",
+              "itemDescription": "CTN,RSC,36X24X16,ECT51BC,DW",
+              "purchaseOrder": "4501602918",
+              "purchaseOrderLineNumber": "000030",
+              "purchaseOrderDate": "20190628",
+              "externalBatchNumber": "PRD1110052",
+              "characteristics": [
+                {
+                  "key": "ZCHB_EXT_BATCH",
+                  "value": "PRD1110052"
+                },
+                {
+                  "key": "ZCHB_SLED",
+                  "value": "00/00/0000"
+                },
+                {
+                  "key": "ZCHB_MWEIGHT",
+                  "value": "0.00"
+                }
+              ],
+              "notes": [
+
+              ],
+              "handlingUnitDetail": {
+                "deliveryLineNumber": "000030",
+                "internalPartNumber": "000000001000031311",
+                "externalPartNumber": "446176",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3S05",
+                "quantity": 130.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,36X24X16,ECT51BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000030",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": null,
+                "characteristics": [
+
+                ],
+                "notes": [
+                  {
+                    "type": "ZEXT",
+                    "notes": [
+                      "DOCK TIME ISN'T REQUIRED",
+                      "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                    ],
+                    "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "handlingUnitId": "00000000001001263892",
+            "handlingUnitExternalId": null,
+            "unitType": "1",
+            "quantity": "20.000",
+            "unitOfMeasure": "EA",
+            "internalBatchNumber": "0000272583",
+            "batch": {
+              "deliveryLineNumber": "900001",
+              "internalPartNumber": "000000001000031311",
+              "externalPartNumber": "446176",
+              "shipFromnPlant": "1701",
+              "storageLocation": "3S05",
+              "quantity": 130.000,
+              "unitOfMeasure": "EA",
+              "itemDescription": "CTN,RSC,36X24X16,ECT51BC,DW",
+              "purchaseOrder": "4501602918",
+              "purchaseOrderLineNumber": "000030",
+              "purchaseOrderDate": "20190628",
+              "externalBatchNumber": "PRD1110052",
+              "characteristics": [
+                {
+                  "key": "ZCHB_EXT_BATCH",
+                  "value": "PRD1110052"
+                },
+                {
+                  "key": "ZCHB_SLED",
+                  "value": "00/00/0000"
+                },
+                {
+                  "key": "ZCHB_MWEIGHT",
+                  "value": "0.00"
+                }
+              ],
+              "notes": [
+
+              ],
+              "handlingUnitDetail": {
+                "deliveryLineNumber": "000030",
+                "internalPartNumber": "000000001000031311",
+                "externalPartNumber": "446176",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3S05",
+                "quantity": 130.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,36X24X16,ECT51BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000030",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": null,
+                "characteristics": [
+
+                ],
+                "notes": [
+                  {
+                    "type": "ZEXT",
+                    "notes": [
+                      "DOCK TIME ISN'T REQUIRED",
+                      "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                    ],
+                    "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "handlingUnitId": "00000000001001263899",
+            "handlingUnitExternalId": null,
+            "unitType": "1",
+            "quantity": "70.000",
+            "unitOfMeasure": "EA",
+            "internalBatchNumber": "0000272583",
+            "batch": {
+              "deliveryLineNumber": "900001",
+              "internalPartNumber": "000000001000031311",
+              "externalPartNumber": "446176",
+              "shipFromnPlant": "1701",
+              "storageLocation": "3S05",
+              "quantity": 130.000,
+              "unitOfMeasure": "EA",
+              "itemDescription": "CTN,RSC,36X24X16,ECT51BC,DW",
+              "purchaseOrder": "4501602918",
+              "purchaseOrderLineNumber": "000030",
+              "purchaseOrderDate": "20190628",
+              "externalBatchNumber": "PRD1110052",
+              "characteristics": [
+                {
+                  "key": "ZCHB_EXT_BATCH",
+                  "value": "PRD1110052"
+                },
+                {
+                  "key": "ZCHB_SLED",
+                  "value": "00/00/0000"
+                },
+                {
+                  "key": "ZCHB_MWEIGHT",
+                  "value": "0.00"
+                }
+              ],
+              "notes": [
+
+              ],
+              "handlingUnitDetail": {
+                "deliveryLineNumber": "000030",
+                "internalPartNumber": "000000001000031311",
+                "externalPartNumber": "446176",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3S05",
+                "quantity": 130.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,36X24X16,ECT51BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000030",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": null,
+                "characteristics": [
+
+                ],
+                "notes": [
+                  {
+                    "type": "ZEXT",
+                    "notes": [
+                      "DOCK TIME ISN'T REQUIRED",
+                      "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                    ],
+                    "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "handlingUnitId": "00000000001001301381",
+            "handlingUnitExternalId": null,
+            "unitType": "1",
+            "quantity": "60.000",
+            "unitOfMeasure": "EA",
+            "internalBatchNumber": "0000280827",
+            "batch": {
+              "deliveryLineNumber": "900005",
+              "internalPartNumber": "000000001000031033",
+              "externalPartNumber": "446373",
+              "shipFromnPlant": "1701",
+              "storageLocation": "3E11",
+              "quantity": 120.000,
+              "unitOfMeasure": "EA",
+              "itemDescription": "CTN,RSC,43X43X39.50,ECT82BC,DW",
+              "purchaseOrder": "4501602918",
+              "purchaseOrderLineNumber": "000040",
+              "purchaseOrderDate": "20190628",
+              "externalBatchNumber": "PRD1112602",
+              "characteristics": [
+                {
+                  "key": "ZCHB_EXT_BATCH",
+                  "value": "PRD1112602"
+                },
+                {
+                  "key": "ZCHB_SLED",
+                  "value": "00/00/0000"
+                },
+                {
+                  "key": "ZCHB_MWEIGHT",
+                  "value": "0.00"
+                }
+              ],
+              "notes": [
+
+              ],
+              "handlingUnitDetail": {
+                "deliveryLineNumber": "000040",
+                "internalPartNumber": "000000001000031033",
+                "externalPartNumber": "446373",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3E11",
+                "quantity": 120.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,43X43X39.50,ECT82BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000040",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": null,
+                "characteristics": [
+
+                ],
+                "notes": [
+                  {
+                    "type": "ZEXT",
+                    "notes": [
+                      "DOCK TIME ISN'T REQUIRED",
+                      "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                    ],
+                    "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "handlingUnitId": "00000000001001301385",
+            "handlingUnitExternalId": null,
+            "unitType": "1",
+            "quantity": "60.000",
+            "unitOfMeasure": "EA",
+            "internalBatchNumber": "0000280827",
+            "batch": {
+              "deliveryLineNumber": "900005",
+              "internalPartNumber": "000000001000031033",
+              "externalPartNumber": "446373",
+              "shipFromnPlant": "1701",
+              "storageLocation": "3E11",
+              "quantity": 120.000,
+              "unitOfMeasure": "EA",
+              "itemDescription": "CTN,RSC,43X43X39.50,ECT82BC,DW",
+              "purchaseOrder": "4501602918",
+              "purchaseOrderLineNumber": "000040",
+              "purchaseOrderDate": "20190628",
+              "externalBatchNumber": "PRD1112602",
+              "characteristics": [
+                {
+                  "key": "ZCHB_EXT_BATCH",
+                  "value": "PRD1112602"
+                },
+                {
+                  "key": "ZCHB_SLED",
+                  "value": "00/00/0000"
+                },
+                {
+                  "key": "ZCHB_MWEIGHT",
+                  "value": "0.00"
+                }
+              ],
+              "notes": [
+
+              ],
+              "handlingUnitDetail": {
+                "deliveryLineNumber": "000040",
+                "internalPartNumber": "000000001000031039",
+                "externalPartNumber": "446373",
+                "shipFromnPlant": "1701",
+                "storageLocation": "3E11",
+                "quantity": 120.000,
+                "unitOfMeasure": "EA",
+                "itemDescription": "CTN,RSC,43X43X39.50,ECT82BC,DW",
+                "purchaseOrder": "4501602918",
+                "purchaseOrderLineNumber": "000040",
+                "purchaseOrderDate": "20190628",
+                "externalBatchNumber": null,
+                "characteristics": [
+
+                ],
+                "notes": [
+                  {
+                    "type": "ZEXT",
+                    "notes": [
+                      "DOCK TIME ISN'T REQUIRED",
+                      "DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                    ],
+                    "noteSummary": "DOCK TIME ISN'T REQUIRED DELIVERY MONDAY THRU THURSDAY ACCEPTED 24/7"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
