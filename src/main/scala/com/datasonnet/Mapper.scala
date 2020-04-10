@@ -205,7 +205,7 @@ class Mapper(var jsonnet: String, argumentNames: java.lang.Iterable[String], imp
 
   private val libraries = Map(
     "DS" -> Mapper.objectify(
-      DS.libraries(dataFormats) + Mapper.library(evaluator, "Util", parseCache)
+      DS.libraries(dataFormats, parseCache) + Mapper.library(evaluator, "Util", parseCache)
     )
   )
 

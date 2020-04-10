@@ -939,3 +939,32 @@ DS.Regex.regexGlobalReplace("xxx2yyy4zzz6aaa", "\\d", square)
 "xxx4yyy16zzz36aaa"
 ------------------------
 
+## Lang
+
+### `datasonnet(string expression)`
+Evaluates and returns the result of a valid DataSonnet expression.
+
+*Example*
+
+In this example payload is a DataSonnet mapping. This mapping is evaluated in the main map and the result is assigned to another field.
+
+.Payload
+------------------------
+{
+    greeting: "Hello" + "World"
+}
+------------------------
+.DataSonnet map:
+------------------------
+{
+    evaluatedValue: DS.Lang.datasonnet(payload)
+}
+------------------------
+.Result
+------------------------
+{
+    "evaluatedValue": {
+        "greeting": "HelloWorld"
+    }
+}
+------------------------

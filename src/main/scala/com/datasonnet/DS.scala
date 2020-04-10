@@ -8,7 +8,7 @@ import java.util.function.Function
 import com.datasonnet
 import com.datasonnet.spi.{DataFormatPlugin, DataFormatService}
 import sjsonnet.Std.builtinWithDefaults
-import sjsonnet.{Applyer, Error, EvalScope, Expr, Materializer, Val}
+import sjsonnet.{Applyer, Error, EvalScope, Expr, Interpreter, Materializer, Path, SjsonnetMain, Val}
 import com.datasonnet.wrap.Library.library
 import pprint.PPrinter
 import sjsonnet.ReadWriter.StringRead
@@ -17,7 +17,7 @@ import ujson.Value
 
 object DS {
 
-  def libraries(dataFormats: DataFormatService):  Map[String, Val] = Map(
+  def libraries(dataFormats: DataFormatService, parseCache: collection.mutable.Map[String, fastparse.Parsed[(Expr, Map[String, Int])]]):  Map[String, Val] = Map(
     "ZonedDateTime" -> library(
       builtin0("now") { (vals, ev, fs) => Instant.now().toString() },
 
@@ -160,6 +160,13 @@ object DS {
       },
     ),
 
+    "Lang" -> library(
+      builtin("datasonnet", "expr") {
+        (ev, fs, expr: String) =>
+          Materializer.reverse(eval(expr, parseCache))
+      },
+    ),
+
     "Regex" -> library(
       builtin("regexFullMatch", "expr", "str") {
         (ev, fs, expr: String, str: String) =>
@@ -284,5 +291,32 @@ object DS {
       //TODO support other types or throw an exception???
       null
     }
+  }
+
+  def eval(s: String, parseCache: collection.mutable.Map[String, fastparse.Parsed[(Expr, Map[String, Int])]]) = {
+    new Interpreter(
+      parseCache,
+      Map(),
+      Map(),
+      DummyPath(),
+      (_, _) => None
+    ).interpret(s, DummyPath("(memory)")) match {
+      case Right(x) => x
+      case Left(e) => throw new Exception(e)
+    }
+  }
+
+  case class DummyPath(segments: String*) extends Path{
+    def relativeToString(p: Path): String = ""
+
+    def debugRead(): Option[String] = None
+
+    def parent(): Path = DummyPath(segments.dropRight(1):_*)
+
+    def segmentCount(): Int = segments.length
+
+    def last: String = segments.last
+
+    def /(s: String): Path = DummyPath(segments :+ s:_*)
   }
 }
