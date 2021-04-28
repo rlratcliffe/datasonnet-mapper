@@ -996,6 +996,30 @@ ds.minBy(payload, function(value) value.age)
 }
 ------------------------
 
+### `or(string first, any second)`
+Returns `first` if `first` is not null, and `second` if it is. The field `first` needs to exist.
+
+*Example*
+
+.Payload
+----------
+{
+	"id": null
+}
+----------
+.DataSonnet map:
+------------------------
+{
+    "userId": ds.or(payload.id, 0)
+}
+------------------------
+.Result
+------------------------
+{
+  "userId": 0
+}
+------------------------
+
 ### `orderBy(array|object items, function func)`
 Reorders the array `items` by the result of `func`.
 
